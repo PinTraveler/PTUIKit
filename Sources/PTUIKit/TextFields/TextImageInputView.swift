@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextImageInputView: View {
+public struct TextImageInputView: View {
     @Binding var inputText: String
     
     let image: Image?
@@ -47,7 +47,7 @@ struct TextImageInputView: View {
         else { field }
     }
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(headline)
                 .font(.headline)

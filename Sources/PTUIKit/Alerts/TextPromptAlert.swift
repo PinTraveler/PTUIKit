@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextPromptAlert: View {
+public struct FloatingTextField: View {
     @State var input = ""
     @State var title = ""
     @State var fieldTitle = ""
@@ -16,7 +16,7 @@ struct TextPromptAlert: View {
     var onCancel: (() -> Void)? = nil
     var onDone: ((String)-> Void)? = nil
     
-    var body: some View {
+    public var body: some View {
         
         VStack() {
           Text(title)
@@ -82,6 +82,6 @@ struct TextPromptAlert: View {
 struct PromptPreviews: PreviewProvider {
     
     static var previews: some View {
-        TextPromptAlert(input: "123456", title: "Password", fieldTitle: "Password", isSecure: true, onCancel: nil, onDone: nil)
+        FloatingTextField(input: "123456", title: "Password", fieldTitle: "Password", isSecure: true, onCancel: nil, onDone: nil)
     }
 }

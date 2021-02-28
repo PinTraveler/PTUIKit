@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct LoadingButton: View {
+public struct LoadingButton: View {
     var text: String
     @Binding var loading: Bool
     var onClick: (() -> Void)? = nil
     
-    var body: some View {
+    public var body: some View {
         if loading {
             HStack {
                 Spacer()

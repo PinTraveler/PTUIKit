@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct CheckboxView<T: Equatable>: View {
+public struct CheckboxView<T: Equatable>: View {
     @Binding var state: T
     @State var desired: T
     @State var text: String
     var onChange: ((Bool) -> Void)? = nil
-    var body: some View {
+    public var body: some View {
         Button(action:{
             state = desired
             onChange?(state == desired)

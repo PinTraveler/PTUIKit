@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct MultilineTextbox: View {
+public struct MultilineTextbox: View {
     @Binding var textInput: String
-    var body: some View {
+    public var body: some View {
         Text(textInput.isEmpty ? "A" : textInput)
             .lineLimit(4)
             .foregroundColor(.clear)
